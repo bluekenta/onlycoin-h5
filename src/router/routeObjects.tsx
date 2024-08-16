@@ -27,13 +27,14 @@ export interface RouteObject {
   name: string;
   element?: React.ReactNode;
   meta?: {
-    title: string;
+    title?: string;
     showNavbar?: number;
     showTabbar?: boolean;
     noAuth?: boolean;
     goBackUrl?: string;
     hasBack?: boolean;
     icon?: string;
+    authRoute?: boolean;
   };
   children?: RouteObject[];
 }
@@ -319,7 +320,7 @@ export const routeObjects: RouteObject[] = [
 
 const generateRoutes = (routeObject: RouteObject) => {
   const routes: RouteObject[] = [];
-  let parentPath = routeObject.path;
+  const parentPath = routeObject.path;
   if (routeObject.children && routeObject.children.length > 0) {
     routeObject.children.forEach((childRoute) => {
       routes.push(
