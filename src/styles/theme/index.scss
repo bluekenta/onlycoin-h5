@@ -1,0 +1,24 @@
+@import "./light.scss";
+@import "./dark.scss";
+
+$theme: (
+  light: $light,
+  dark: $dark,
+);
+
+$currentTheme: "light";
+
+@mixin useTheme() {
+  @each $key, $value in $theme {
+    $currentTheme: $key !global;
+    html[data-theme="#{$key}"] & {
+      // transition: all 0.2s;
+      @content;
+    }
+  }
+}
+
+@function getVar($key) {
+  $themeMap: map-get($theme, $currentTheme);
+  @return map-get($themeMap, $key);
+}
