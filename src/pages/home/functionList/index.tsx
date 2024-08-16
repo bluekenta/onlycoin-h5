@@ -1,42 +1,30 @@
+import Icons from "@/assets/icons";
 import { t } from "i18next";
-import options from "@/assets/home/options.png";
-import service from "@/assets/home/service.png";
-import subscription from "@/assets/home/subscription.png";
-import mining from "@/assets/home/mining.png";
 
 const FunctionList = () => {
   const functions = [
     {
-      name: "options",
-      title: t("Options"),
-      icon: options,
+      name: "buy",
+      title: t("buy"),
+      icon: <Icons type="home_buy" />,
     },
     {
-      name: "service",
-      title: t("Service"),
-      icon: service,
+      name: "sell",
+      title: t("sell"),
+      icon: <Icons type="home_sell" />,
     },
     {
-      name: "subscription",
-      title: t("Subscription"),
-      icon: subscription,
-    },
-    {
-      name: "mining",
-      title: t("Mining"),
-      icon: mining,
+      name: "blink",
+      title: t("blink"),
+      icon: <Icons type="home_blink" />,
     },
   ];
   return (
-    <div className="flex justify-between items-center px-[20px]">
+    <div className="flex justify-between items-center gap-[14px] px-[20px]">
       {functions.map((item) => (
-        <div key={item.name} className="relative h-[70px]">
-          <div className="w-[46px] h-[46px] border-[1px] border-[#464C66] rounded-[12px] flex justify-center items-center ">
-            <img
-              src={item.icon}
-              alt={item.name}
-              className="w-[24px] h-[24px]"
-            />
+        <div key={item.name} className="relative h-[73px]">
+          <div className="w-[46px] h-[46px] rounded-[12px] flex justify-center items-center ">
+            {item.icon}
           </div>
           <div className="absolute bottom-0 left-[50%] tranfrom -translate-x-[50%] text-[#333] dark:text-[#ccc] leading-[14px]">
             {item.name}
