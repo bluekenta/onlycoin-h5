@@ -9,9 +9,10 @@ export default {
     },
     extend: {
       colors: {
-        light_color: "var(--light-color)",
-        dark_color: "var(--dark-color)",
-        dark_bg_color: "var(--dark-bg-color)",
+        dark_bg: "var(--dark-bg)",
+        primary: "var(--primary-color)",
+        secondary: "var(--secondary-color)",
+        inactive: "var(--inactive-color)",
       },
       fontSize: {
         base: "12px",

@@ -6,7 +6,7 @@ $theme: (
   dark: $dark,
 );
 
-$currentTheme: "light";
+$currentTheme: "dark";
 
 @mixin useTheme() {
   @each $key, $value in $theme {

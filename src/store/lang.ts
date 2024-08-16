@@ -1,7 +1,7 @@
 import { INIT_LANG } from "@/settings";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import i18n, { t } from "@/i18n/index";
+import i18n from "@/i18n/index";
 
 export const useLangStore = create<LangStore>()(
   persist(

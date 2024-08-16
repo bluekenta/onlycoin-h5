@@ -1,33 +1,14 @@
 :root:root {
-  --dark-color: #fff;
-  --light-color: #2f3c6b;
-  --dark-bg-color: #2f3c6b;
+  --primary-color: #9fe870;
+  --secondary-color: #163300;
+  --dark-bg: #000000;
+  --inactive-color: #666666;
 }
 
 :root.light {
   --test: blue;
-  --ant-input: rgba(47, 60, 107, 0.5);
 }
 
 :root.dark {
   --test: red;
-  --ant-input: rgba(113, 117, 151, 1);
-}
-
-.light {
-  color: var(--light-color);
-}
-
-.dark {
-  color: var(--dark-color);
-  .custom-form-element {
-    background-color: #232744;
-  }
-  .ant-otp {
-    .ant-input {
-      background-color: #232744;
-      color: white;
-      border-color: #5a5d73 !important;
-    }
-  }
 }
