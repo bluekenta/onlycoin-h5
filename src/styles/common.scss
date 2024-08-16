@@ -1,0 +1,167 @@
+html {
+  transition: background-color 0.2s;
+  height: 100%;
+}
+
+body {
+  font-size: 12px;
+  text-transform: capitalize;
+  height: 100%;
+  touch-action: manipulation;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+*,
+:lang(en) body,
+[lang]:lang(en),
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  font-display: fallback;
+}
+
+.scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+input::-webkit-input-placeholder {
+  color: #9a9ea4 !important;
+}
+
+.scrollY {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollX {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollX,
+.scrollY::-webkit-scrollbar {
+  display: none;
+}
+
+.gradient-text-1 {
+  background: linear-gradient(141.26deg, #5c70dc 8.46%, #c4035d 93.71%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-2 {
+  background: linear-gradient(
+    90deg,
+    rgba(66, 177, 246, 0.8) 0%,
+    rgba(46, 87, 229, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-3 {
+  background: linear-gradient(94.09deg, #d2a7a0 0%, #7296fe 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg-blue-shallow {
+  background: linear-gradient(
+    90deg,
+    rgba(66, 177, 246, 0.2) 0%,
+    rgba(46, 87, 229, 0.2) 100%
+  );
+}
+
+.gradient-blue-bg {
+  @apply gradient-bg-blue-shallow dark:bg-dark_bg_color rounded-[10px];
+}
+
+.gradient-bg-blue {
+  background: linear-gradient(
+    90deg,
+    rgba(66, 177, 246) 0%,
+    rgba(46, 87, 229) 100%
+  );
+}
+
+.gradient-border-1 {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    background: linear-gradient(90deg, #40abf4 0%, #2f5ee6 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+}
+
+.ant-progress {
+  .ant-progress-outer {
+    width: 126px !important;
+    .ant-progress-text {
+      font-size: 12px;
+      line-height: 14px;
+      color: #e4a14f;
+      margin-inline-end: 3px !important;
+    }
+    .ant-progress-inner {
+      width: 100px !important;
+      height: 2px;
+      .ant-progress-bg {
+        height: 2px !important;
+      }
+    }
+  }
+}
+
+.custom-input {
+  &.ant-input {
+    background: none !important;
+    border: none !important;
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--ant-input);
+  }
+}
+
+.logout-modal {
+  width: 280px !important;
+  top: 100px;
+  margin-block: 0 !important;
+  .ant-modal-content {
+    padding: 0 !important;
+    border-radius: 10px;
+    .ant-modal-close {
+      display: none;
+    }
+  }
+}
+
+.ant-otp {
+  display: flex;
+  justify-content: space-between;
+  .ant-input {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+    color: #2f3c6b;
+  }
+}
