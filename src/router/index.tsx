@@ -2,12 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import renderRoutes from "./routeObjects";
 import AuthGuard from "@/layout/authGuard";
-import MainLayout from "@/layout";
+import Layout from "@/layout";
 import authRoutes from "./authRoutes";
-import AuthLayout from "@/layout/authLayout";
 import NotFound from "@/pages/404";
 
-const RouteeProvider: React.FC = () => {
+const RouteProvider: React.FC = () => {
   return (
     <Router>
       <Routes>
@@ -17,16 +16,20 @@ const RouteeProvider: React.FC = () => {
             path={path}
             element={
               <AuthGuard noAuth={meta?.noAuth}>
-                <MainLayout>{element}</MainLayout>
+                <Layout>{element}</Layout>
               </AuthGuard>
             }
           />
         ))}
-        {authRoutes.map(({ path, element }) => (
+        {authRoutes.map(({ path, element, meta }) => (
           <Route
             key={path}
             path={path}
-            element={<AuthLayout>{element}</AuthLayout>}
+            element={
+              <AuthGuard authRoute={meta?.authRoute}>
+                <Layout>{element}</Layout>
+              </AuthGuard>
+            }
           />
         ))}
         <Route path="*" element={<NotFound />} />
@@ -35,4 +38,4 @@ const RouteeProvider: React.FC = () => {
   );
 };
 
-export default RouteeProvider;
+export default RouteProvider;
