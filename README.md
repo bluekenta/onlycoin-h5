@@ -1,5 +1,5 @@
-OnlyCoin Frontend
+# OnlyCoin Frontend
 
-# React + Zustand + TypeScript
+### React + Zustand + TypeScript
 
-# Ant Design + SCSS + TailwindCSS
+#### Ant Design + SCSS + TailwindCSS

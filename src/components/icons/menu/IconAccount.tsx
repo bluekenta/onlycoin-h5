@@ -1,6 +1,6 @@
 import { SvgIconProps } from "..";
 
-export default (props: SvgIconProps) => {
+const IconAccount = (props: SvgIconProps) => {
   return (
     <svg
       width="25"
@@ -16,20 +16,22 @@ export default (props: SvgIconProps) => {
         height="13"
         rx="2"
         stroke={props.active ? "#9FE870" : "#666666"}
-        stroke-width="2"
+        strokeWidth="2"
       />
       <path
         d="M7.33337 15.5H7.34337"
         stroke={props.active ? "#9FE870" : "#666666"}
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
       <path
         d="M4.33337 11.5H21.3334"
         stroke={props.active ? "#9FE870" : "#666666"}
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
 };
+
+export default IconAccount;

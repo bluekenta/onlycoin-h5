@@ -1,12 +1,22 @@
 import HomeIcons from "./home";
-import TabbarIcons from "./tabbar";
+import MenuIcons from "./menu";
+import WalletIcons from "./wallet";
 
-const { IconAccount, IconEarn, IconHome, IconManage } = TabbarIcons;
+const {
+  IconAccount,
+  IconEarn,
+  IconHome,
+  IconManage,
+  IconSandwich,
+  IconLogo,
+  IconInactiveLogo,
+} = MenuIcons;
 const { IconBlink, IconBuy, IconSell } = HomeIcons;
+const { IconMetamask, IconOkx, IconPhantom } = WalletIcons;
 
 export interface SvgIconProps {
-  width?: number;
-  height?: number;
+  w?: number;
+  h?: number;
   fill?: string;
   bg?: string;
   onClick?: (e?: React.MouseEvent) => void;
@@ -14,15 +24,8 @@ export interface SvgIconProps {
   active?: boolean;
 }
 
-interface IIcons extends SvgIconProps {
-  type:
-    | "home_buy"
-    | "home_sell"
-    | "home_blink"
-    | "tabbar_home"
-    | "tabbar_account"
-    | "tabbar_earn"
-    | "tabbar_manage";
+export interface IIcons extends SvgIconProps {
+  type: string;
 }
 
 const Icons = (props: IIcons) => {
@@ -34,14 +37,26 @@ const Icons = (props: IIcons) => {
         return <IconSell />;
       case "home_blink":
         return <IconBlink />;
-      case "tabbar_home":
+      case "menu_home":
         return <IconHome {...props} />;
-      case "tabbar_account":
+      case "menu_account":
         return <IconAccount {...props} />;
-      case "tabbar_earn":
+      case "menu_earn":
         return <IconEarn {...props} />;
-      case "tabbar_manage":
+      case "menu_manage":
         return <IconManage {...props} />;
+      case "menu_sandwich":
+        return <IconSandwich />;
+      case "menu_logo":
+        return <IconLogo />;
+      case "menu_inactive_logo":
+        return <IconInactiveLogo />;
+      case "wallet_metamask":
+        return <IconMetamask />;
+      case "wallet_okx":
+        return <IconOkx />;
+      case "wallet_phantom":
+        return <IconPhantom />;
 
       default:
         return null;

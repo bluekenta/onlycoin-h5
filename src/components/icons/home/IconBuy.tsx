@@ -1,4 +1,4 @@
-export default () => {
+const IconBuy = () => {
   return (
     <svg
       width="24"
@@ -10,8 +10,8 @@ export default () => {
       <path
         d="M4 11.8994H21"
         stroke="#9FE870"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <rect
         x="3"
@@ -20,14 +20,16 @@ export default () => {
         height="13"
         rx="2"
         stroke="white"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <path
         d="M7 15.8994H7.01"
         stroke="#9FE870"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
     </svg>
   );
 };
+
+export default IconBuy;

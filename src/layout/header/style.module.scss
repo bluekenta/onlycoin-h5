@@ -1,0 +1,23 @@
+@import "@/styles/theme.scss";
+@import "@/styles/theme/index.scss";
+
+:local(.wrapper) {
+  &::before,
+  &::after {
+    position: absolute;
+    width: 255px;
+    height: 184px;
+    background: var(--primary);
+    opacity: 0.2;
+    filter: blur(52.45px);
+    content: "";
+  }
+  &::before {
+    left: -90px;
+    top: -111px;
+  }
+  &::after {
+    left: 181px;
+    top: -71px;
+  }
+}

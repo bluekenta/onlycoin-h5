@@ -6,7 +6,7 @@ export interface RouteObject {
   element?: React.ReactNode;
   meta?: {
     title: string;
-    showTabbar?: boolean;
+    showNavbar?: boolean;
     noAuth?: boolean;
     goBackUrl?: string;
     hasBack?: boolean;
@@ -21,7 +21,7 @@ export const routeObjects: RouteObject[] = [
     path: "/",
     name: "home",
     element: <Home />,
-    meta: { title: "home", showTabbar: true },
+    meta: { title: "home", showNavbar: true },
   },
 ];
 

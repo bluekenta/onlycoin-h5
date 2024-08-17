@@ -1,5 +1,5 @@
 import { t } from "@/i18n";
-import Icons from "@/assets/icons";
+import Icons from "@/components/icons";
 
 const useConst = () => {
   const title = "OnlyCoin";
@@ -8,29 +8,29 @@ const useConst = () => {
       title: t("home"),
       name: "home",
       path: "/",
-      icon: <Icons type="tabbar_home" />,
-      activeIcon: <Icons type="tabbar_home" active={true} />,
+      icon: <Icons type="menu_home" />,
+      activeIcon: <Icons type="menu_home" active={true} />,
     },
     {
       title: t("account"),
       path: "/account",
       name: "account",
-      icon: <Icons type="tabbar_account" />,
-      activeIcon: <Icons type="tabbar_account" active={true} />,
+      icon: <Icons type="menu_account" />,
+      activeIcon: <Icons type="menu_account" active={true} />,
     },
     {
       title: t("earn"),
       path: "/earn",
       name: "earn",
-      icon: <Icons type="tabbar_earn" />,
-      activeIcon: <Icons type="tabbar_earn" active={true} />,
+      icon: <Icons type="menu_earn" />,
+      activeIcon: <Icons type="menu_earn" active={true} />,
     },
     {
       title: t("manage"),
       path: "/manage",
       name: "manage",
-      icon: <Icons type="tabbar_manage" />,
-      activeIcon: <Icons type="tabbar_manage" active={true} />,
+      icon: <Icons type="menu_manage" />,
+      activeIcon: <Icons type="menu_manage" active={true} />,
     },
   ];
 
