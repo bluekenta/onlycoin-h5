@@ -23,9 +23,9 @@ const AuthGuard: React.FC<AuthGuardProps> = ({
   const isAuthenticated = Boolean(token); // 认证逻辑
 
   useEffect(() => {
-    // if (!noAuth && !isAuthenticated) {
-    //   navigate("/login"); // 如果未认证且路由需要认证，则重定向到登录
-    // }
+    if (!noAuth && !isAuthenticated) {
+      navigate("/login"); // 如果未认证且路由需要认证，则重定向到登录
+    }
     if (authRoute && isAuthenticated) {
       navigate("/");
     }

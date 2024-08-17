@@ -1,14 +1,7 @@
 :root:root {
-  --primary-color: #9fe870;
-  --secondary-color: #163300;
+  --primary: #9fe870;
+  --secondary: #163300;
   --dark-bg: #000000;
-  --inactive-color: #666666;
-}
-
-:root.light {
-  --test: blue;
-}
-
-:root.dark {
-  --test: red;
+  --inactive: #666666;
+  --border-inactive: #bcbfba;
 }

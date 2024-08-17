@@ -1,7 +1,6 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "@/assets/fonts/fonts.scss";
 
+@import "./tailwind.scss";
 @import "./theme.scss";
 @import "./theme/index.scss";
 @import "./common.scss";

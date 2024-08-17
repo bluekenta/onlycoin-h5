@@ -32,7 +32,14 @@ const RouteProvider: React.FC = () => {
             }
           />
         ))}
-        <Route path="*" element={<NotFound />} />
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <NotFound />
+            </Layout>
+          }
+        />
       </Routes>
     </Router>
   );
