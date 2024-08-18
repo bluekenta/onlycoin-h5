@@ -1,19 +1,18 @@
+import AllOrders from "./allOrders";
 import FunctionList from "./functionList";
+import MainCard from "./mainCard";
 
 const Home = () => {
   return (
     <>
-      <section className="w-full px-[16px] mt-[15px]">
-        <div className="rounded-[10px] h-[122px] bg-primary bg-no-repeat bg-contain px-[10px] pt-[10px] pb-[17px] flex gap-[10px] items-center">
-          <div className="flex flex-col gap-[8px] flex-1">
-            <div className="text-white  text-base leading-[14px]">
-              $35,696 USDT
-            </div>
-          </div>
-        </div>
+      <section className="relative mx-[16px] my-[15px] px-[16px] pt-[17px] pb-[19px] rounded-[10px] bg-primary bg-no-repeat bg-contain">
+        <MainCard />
       </section>
-      <section className="mt-[15px]">
+      <section className="flex justify-between items-center gap-[14px] mx-[16px]">
         <FunctionList />
+      </section>
+      <section className="flex flex-col my-[20px] mx-[16px]">
+        <AllOrders />
       </section>
     </>
   );
