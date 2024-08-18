@@ -1,4 +1,4 @@
-import { SvgIconProps } from "..";
+import { SvgIconProps } from "./";
 
 const IconHome = (props: SvgIconProps) => {
   return (

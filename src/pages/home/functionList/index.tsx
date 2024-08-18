@@ -6,32 +6,31 @@ const FunctionList = () => {
     {
       name: "buy",
       title: t("buy"),
-      icon: <Icons type="home_buy" />,
+      icon: <Icons type="buy" />,
     },
     {
       name: "sell",
       title: t("sell"),
-      icon: <Icons type="home_sell" />,
+      icon: <Icons type="sell" />,
     },
     {
       name: "blink",
       title: t("blink"),
-      icon: <Icons type="home_blink" />,
+      icon: <Icons type="blink" />,
     },
   ];
   return (
-    <div className="flex justify-between items-center gap-[14px] px-[20px]">
+    <>
       {functions.map((item) => (
-        <div key={item.name} className="relative h-[73px]">
-          <div className="w-[46px] h-[46px] rounded-[12px] flex justify-center items-center ">
-            {item.icon}
-          </div>
-          <div className="absolute bottom-0 left-[50%] tranfrom -translate-x-[50%] text-[#333] dark:text-[#ccc] leading-[14px]">
-            {item.name}
-          </div>
+        <div
+          key={item.name}
+          className="relative h-[73px] w-full flex flex-col gap-[1px] items-center justify-center bg-semi_dark rounded-[12px]"
+        >
+          <p>{item.icon}</p>
+          <p>{item.name}</p>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

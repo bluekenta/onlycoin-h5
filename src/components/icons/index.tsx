@@ -1,18 +1,15 @@
-import HomeIcons from "./home";
-import MenuIcons from "./menu";
-import WalletIcons from "./wallet";
-
-const {
-  IconAccount,
-  IconEarn,
-  IconHome,
-  IconManage,
-  IconSandwich,
-  IconLogo,
-  IconInactiveLogo,
-} = MenuIcons;
-const { IconBlink, IconBuy, IconSell } = HomeIcons;
-const { IconMetamask, IconOkx, IconPhantom } = WalletIcons;
+import IconAccount from "./IconAccount";
+import IconBlink from "./IconBlink";
+import IconBuy from "./IconBuy";
+import IconClipboard from "./IconClipboard";
+import IconEarn from "./IconEarn";
+import IconHome from "./IconHome";
+import IconLogo, { IconInactiveLogo } from "./IconLogo";
+import IconManage from "./IconManage";
+import { IconMetamask, IconOkx, IconPhantom } from "./IconWallet";
+import IconSandwich from "./IconSandwich";
+import IconSell from "./IconSell";
+import IconView from "./IconView";
 
 export interface SvgIconProps {
   w?: number;
@@ -31,11 +28,11 @@ export interface IIcons extends SvgIconProps {
 const Icons = (props: IIcons) => {
   const getIcon = () => {
     switch (props.type) {
-      case "home_buy":
+      case "buy":
         return <IconBuy />;
-      case "home_sell":
+      case "sell":
         return <IconSell />;
-      case "home_blink":
+      case "blink":
         return <IconBlink />;
       case "menu_home":
         return <IconHome {...props} />;
@@ -47,10 +44,14 @@ const Icons = (props: IIcons) => {
         return <IconManage {...props} />;
       case "menu_sandwich":
         return <IconSandwich />;
-      case "menu_logo":
+      case "logo":
         return <IconLogo />;
-      case "menu_inactive_logo":
+      case "inactive_logo":
         return <IconInactiveLogo />;
+      case "clipboard":
+        return <IconClipboard />;
+      case "view":
+        return <IconView />;
       case "wallet_metamask":
         return <IconMetamask />;
       case "wallet_okx":

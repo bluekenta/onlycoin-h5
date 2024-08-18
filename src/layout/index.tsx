@@ -13,7 +13,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const currentRoute = renderRoutes.find((route) => route.path === pathname);
 
   return (
-    <div className="w-screen h-[100vh] flex flex-col bg-dark_bg">
+    <div className="w-screen h-[100vh] flex flex-col bg-black">
       <Header />
       <main className="flex-1 overflow-y-scroll">{children}</main>
       {currentRoute?.meta?.showNavbar && <Navbar />}

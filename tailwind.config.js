@@ -9,7 +9,7 @@ export default {
     },
     extend: {
       colors: {
-        dark_bg: "var(--dark-bg)",
+        semi_dark: "var(--semi-dark)",
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         inactive: "var(--inactive)",

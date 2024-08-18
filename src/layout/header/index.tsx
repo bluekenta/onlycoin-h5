@@ -13,7 +13,7 @@ const Header = () => {
         "h-[44px] flex justify-between items-center px-[16px]"
       )}
     >
-      <Icons type="menu_logo" onClick={() => navigate("/")} />
+      <Icons type="logo" onClick={() => navigate("/")} />
       <Icons type="menu_sandwich" />
     </header>
   );
