@@ -1,15 +1,19 @@
 import { t } from "@/i18n";
 import classnames from "classnames";
 import style from "./style.module.scss";
-import PrimaryButton, { WalletButton } from "@/components/Button";
+import PrimaryButton, { WalletButton } from "@/components/button";
+import { useState } from "react";
+import { EType } from "@/components/overlay/interface";
+import Overlay from "@/components/overlay";
+import Icons from "@/components/icons";
 
 const Login = () => {
+  const [showOverlay, setShowOverlay] = useState<boolean>(false);
+  const [overlayType, setOverlayType] = useState<string>("");
+
   return (
     <section
-      className={classnames(
-        style.wrapper,
-        "flex flex-col font-SFProDisplay pt-[20px] px-[15px]"
-      )}
+      className={classnames(style.wrapper, "flex flex-col pt-[20px] px-[16px]")}
     >
       <h2 className="font-extrabold text-[24px] leading-[32px]">
         {t("welcome")}
@@ -25,11 +29,25 @@ const Login = () => {
         </div>
         <div className="pt-[20px]">
           <span className="text-label">{t("register-redirect")} </span>
-          <span className="text-primary text-[15px] leading-[21px]">
+          <span
+            className="text-primary text-[15px] leading-[21px]"
+            onClick={() => {
+              setShowOverlay(true);
+              setOverlayType("paymentMethod");
+            }}
+          >
             {t("register")}
           </span>
         </div>
-        <PrimaryButton cn="mt-[30px]">{t("email-login")}</PrimaryButton>
+        <PrimaryButton
+          cn="mt-[30px]"
+          onClick={() => {
+            setShowOverlay(true);
+            setOverlayType("receptionMethod");
+          }}
+        >
+          {t("email-login")}
+        </PrimaryButton>
       </div>
       <div className="flex flex-col">
         <p
@@ -40,18 +58,184 @@ const Login = () => {
         >
           {t("other-signin")}
         </p>
-        <WalletButton cn="mt-[25px]" type="wallet_metamask">
+
+        {/* 
+        onCick event is only for demo purpose. Remove after backend integration
+        */}
+
+        <WalletButton
+          cn="mt-[25px]"
+          type="wallet_metamask"
+          onClick={() => {
+            setShowOverlay(true);
+            setOverlayType("selectCurrency");
+          }}
+        >
           {t("metamask")}
         </WalletButton>
         <div className="flex gap-[13px] mt-[16px]">
-          <WalletButton cn="flex-1" type="wallet_okx">
+          <WalletButton
+            cn="flex-1"
+            type="wallet_okx"
+            onClick={() => {
+              setShowOverlay(true);
+              setOverlayType("selectToken");
+            }}
+          >
             {t("okx")}
           </WalletButton>
-          <WalletButton cn="flex-1" type="wallet_phantom">
+          <WalletButton
+            cn="flex-1"
+            type="wallet_phantom"
+            onClick={() => {
+              setShowOverlay(true);
+              setOverlayType("addAccount");
+            }}
+          >
             {t("phantom")}
           </WalletButton>
         </div>
       </div>
+
+      <Overlay
+        title="Select payment method"
+        type={EType.METHOD}
+        visible={showOverlay && overlayType === "paymentMethod"}
+        setVisible={setShowOverlay}
+        methodChildren={{
+          desc: "Available payment methods based on your region",
+          cards: [
+            {
+              symbol: <Icons type="card" className="!w-[30px] !h-[30px]" />,
+              title: "Debit or Credit",
+              card: [
+                <Icons type="card_visa" className="!w-[39px] !h-[14px]" />,
+                <Icons type="card_master" className="!w-[30px] !h-[18px]" />,
+              ],
+              desc: "5 - 10 mins $100 lowest buy limit",
+              alarm: true,
+            },
+            {
+              symbol: (
+                <Icons type="card_bank" className="!w-[30px] !h-[30px]" />
+              ),
+              title: "Business Bank Transfer",
+              card: [
+                <Icons type="card_sepa" className="!w-[28px] !h-[18px]" />,
+              ],
+              desc: "1 - 5 business days ",
+              alarm: true,
+            },
+          ],
+        }}
+      />
+
+      <Overlay
+        title="Reception method"
+        type={EType.METHOD}
+        visible={showOverlay && overlayType === "receptionMethod"}
+        setVisible={setShowOverlay}
+        methodChildren={{
+          desc: "Available payment methods based on your region",
+          cards: [
+            {
+              symbol: (
+                <Icons type="card_personal" className="!w-[30px] !h-[30px]" />
+              ),
+              title: "Personal",
+              desc: "5 - 10 mins $100 lowest buy limit",
+              alarm: true,
+            },
+            {
+              symbol: (
+                <Icons type="card_bank" className="!w-[30px] !h-[30px]" />
+              ),
+              title: "Business",
+              desc: "1 - 5 business days",
+              alarm: true,
+            },
+          ],
+        }}
+      />
+
+      <Overlay
+        title="Select a currency"
+        type={EType.CURRENCY}
+        visible={showOverlay && overlayType === "selectCurrency"}
+        setVisible={setShowOverlay}
+        currencyChildren={{
+          listTitle: "Select a currency",
+          searchBox: true,
+          currencies: [
+            {
+              icon: <Icons type="SGD" className="!w-[36px] !h-[36px]" />,
+              name: "SGD",
+              desc: "Singapore Dollar",
+            },
+            {
+              icon: <Icons type="INR" className="!w-[36px] !h-[36px]" />,
+              name: "INR",
+              desc: "Indian Rupee",
+            },
+            {
+              icon: <Icons type="USD" className="!w-[36px] !h-[36px]" />,
+              name: "USD",
+              desc: "US Dollar",
+            },
+          ],
+        }}
+      />
+
+      <Overlay
+        title="Select a currency"
+        type={EType.CURRENCY}
+        visible={showOverlay && overlayType === "selectToken"}
+        setVisible={setShowOverlay}
+        currencyChildren={{
+          listTitle: "All tokens",
+          searchBox: true,
+          currencies: [
+            {
+              icon: <Icons type="SGD" className="!w-[36px] !h-[36px]" />,
+              name: "USDT",
+              desc: "Tron",
+            },
+            {
+              icon: <Icons type="INR" className="!w-[36px] !h-[36px]" />,
+              name: "USDT",
+              desc: "BNB Smart Chain",
+            },
+            {
+              icon: <Icons type="USD" className="!w-[36px] !h-[36px]" />,
+              name: "USDT",
+              desc: "TON",
+            },
+          ],
+        }}
+      />
+
+      <Overlay
+        title="Add Account"
+        type={EType.METHOD}
+        visible={showOverlay && overlayType === "addAccount"}
+        setVisible={setShowOverlay}
+        methodChildren={{
+          cards: [
+            {
+              symbol: (
+                <Icons type="card_personal" className="!w-[30px] !h-[30px]" />
+              ),
+              title: "Personal",
+            },
+            {
+              symbol: (
+                <Icons type="card_bank" className="!w-[30px] !h-[30px]" />
+              ),
+              title: "Business",
+            },
+          ],
+        }}
+      />
     </section>
   );
 };

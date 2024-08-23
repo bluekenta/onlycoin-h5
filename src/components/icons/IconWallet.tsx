@@ -1,12 +1,6 @@
 export const IconMetamask = () => {
   return (
-    <svg
-      width="24"
-      height="23"
-      viewBox="0 0 24 23"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_163_395)">
         <path
           d="M22.6011 0.68573L13.5908 7.35087L15.2708 3.42173L22.6011 0.68573Z"
@@ -116,13 +110,7 @@ export const IconMetamask = () => {
 
 export const IconOkx = () => {
   return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_163_905)">
         <path
           d="M16 0H8C3.58172 0 0 3.58172 0 8V16C0 20.4183 3.58172 24 8 24H16C20.4183 24 24 20.4183 24 16V8C24 3.58172 20.4183 0 16 0Z"
@@ -144,13 +132,7 @@ export const IconOkx = () => {
 
 export const IconPhantom = () => {
   return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_163_822)">
         <path
           d="M16 0H8C3.58172 0 0 3.58172 0 8V16C0 20.4183 3.58172 24 8 24H16C20.4183 24 24 20.4183 24 16V8C24 3.58172 20.4183 0 16 0Z"

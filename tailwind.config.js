@@ -14,6 +14,7 @@ export default {
         secondary: "var(--secondary)",
         inactive: "var(--inactive)",
         border_inactive: "var(--border-inactive)",
+        overlay: "var(--overlay)"
       },
       fontSize: {
         base: "12px",
