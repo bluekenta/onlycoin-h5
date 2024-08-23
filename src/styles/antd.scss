@@ -1,0 +1,20 @@
+.ant-modal {
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ant-modal-content {
+      width: 343px;
+      background: #171717;
+      padding: 0;
+      border-radius: 12px;
+      @apply gradient-border-grey;
+      .ant-modal-close {
+        display: none;
+      }
+      .ant-modal-footer {
+        display: none;
+      }
+    }
+  }
+}

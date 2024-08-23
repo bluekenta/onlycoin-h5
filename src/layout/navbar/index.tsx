@@ -12,14 +12,14 @@ const Navbar = () => {
   return (
     <footer
       className={classnames(
-        "h-[49px] flex justify-between px-[30px] border-t-[1px] border-inactive"
+        "h-[49px] flex justify-between px-[30px] py-[6.5px] border-t-[1px] border-inactive"
       )}
     >
       {tabs.map((item) => (
         <div
           key={item.title}
           onClick={() => navigate(item.path)}
-          className="my-[6.5px] text-center text-base flex flex-col items-center"
+          className="text-center text-base flex flex-col items-center"
         >
           {currentRoute?.name === item.name ? item.activeIcon : item.icon}
           <div

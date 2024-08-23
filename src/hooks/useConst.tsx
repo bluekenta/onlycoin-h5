@@ -8,29 +8,41 @@ const useConst = () => {
       title: t("home"),
       name: "home",
       path: "/",
-      icon: <Icons type="menu_home" />,
-      activeIcon: <Icons type="menu_home" active={true} />,
+      icon: <Icons type="menu_home" className="w-[24px] h-[24px]" />,
+      activeIcon: (
+        <Icons type="menu_home" className="w-[24px] h-[24px]" active={"true"} />
+      ),
     },
     {
       title: t("account"),
       path: "/account",
       name: "account",
-      icon: <Icons type="menu_account" />,
-      activeIcon: <Icons type="menu_account" active={true} />,
+      icon: <Icons type="account" className="w-[24px] h-[24px]" />,
+      activeIcon: (
+        <Icons type="account" className="w-[24px] h-[24px]" active={"true"} />
+      ),
     },
     {
       title: t("earn"),
       path: "/earn",
       name: "earn",
-      icon: <Icons type="menu_earn" />,
-      activeIcon: <Icons type="menu_earn" active={true} />,
+      icon: <Icons type="menu_earn" className="w-[24px] h-[24px]" />,
+      activeIcon: (
+        <Icons type="menu_earn" className="w-[24px] h-[24px]" active={"true"} />
+      ),
     },
     {
       title: t("manage"),
       path: "/manage",
       name: "manage",
-      icon: <Icons type="menu_manage" />,
-      activeIcon: <Icons type="menu_manage" active={true} />,
+      icon: <Icons type="menu_manage" className="w-[24px] h-[24px]" />,
+      activeIcon: (
+        <Icons
+          type="menu_manage"
+          className="w-[24px] h-[24px]"
+          active={"true"}
+        />
+      ),
     },
   ];
 

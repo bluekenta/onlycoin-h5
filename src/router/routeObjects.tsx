@@ -1,4 +1,7 @@
+import Account from "@/pages/account";
+import Earn from "@/pages/earn";
 import Home from "@/pages/home";
+import Manage from "@/pages/manage";
 
 export interface RouteObject {
   path: string;
@@ -22,6 +25,24 @@ export const routeObjects: RouteObject[] = [
     name: "home",
     element: <Home />,
     meta: { title: "home", showNavbar: true },
+  },
+  {
+    path: "/account",
+    name: "account",
+    element: <Account />,
+    meta: { title: "account", showNavbar: true },
+  },
+  {
+    path: "/earn",
+    name: "earn",
+    element: <Earn />,
+    meta: { title: "earn", showNavbar: true },
+  },
+  {
+    path: "/manage",
+    name: "manage",
+    element: <Manage />,
+    meta: { title: "manage", showNavbar: true },
   },
 ];
 
