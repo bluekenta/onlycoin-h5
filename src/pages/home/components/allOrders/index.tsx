@@ -53,7 +53,7 @@ const AllOrders = () => {
       </div>
       {orders.map((item, index) => (
         <div className="flex flex-col gap-[14px]" key={index}>
-          <div className="flex flex-col gap-[10px]">
+          <div className="flex flex-col gap-[10px] text-white">
             <div className="text-[14px] leading-[17px] font-600 text-[#999999] pl-[6px]">
               August 9, 2024
             </div>

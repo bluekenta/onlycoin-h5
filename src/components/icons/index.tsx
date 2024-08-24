@@ -29,6 +29,7 @@ import IconCard, {
   IconVISACard,
 } from "./IconCard";
 import IconAlarm from "./IconAlarm";
+import IconClock from "./IconClock";
 
 export interface SvgIconProps {
   w?: number;
@@ -113,6 +114,9 @@ const Icons = (props: IIcons) => {
         return <IconPersonalCard {...props} />;
       case "alarm":
         return <IconAlarm {...props} />;
+      case "clock":
+        return <IconClock {...props} />;
+
       default:
         return null;
     }

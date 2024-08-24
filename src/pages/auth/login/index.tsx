@@ -159,35 +159,65 @@ const Login = () => {
       />
 
       <Overlay
-        title="Select a currency"
+        title={t("select-currency")}
         type={EType.CURRENCY}
         visible={showOverlay && overlayType === "selectCurrency"}
         setVisible={setShowOverlay}
         currencyChildren={{
-          listTitle: "Select a currency",
+          listTitle: t("select-currency"),
           searchBox: true,
           currencies: [
             {
               icon: <Icons type="SGD" className="!w-[36px] !h-[36px]" />,
               name: "SGD",
-              desc: "Singapore Dollar",
+              desc: t("sg-dollar"),
             },
             {
               icon: <Icons type="INR" className="!w-[36px] !h-[36px]" />,
               name: "INR",
-              desc: "Indian Rupee",
+              desc: t("ind-rupee"),
             },
             {
               icon: <Icons type="USD" className="!w-[36px] !h-[36px]" />,
               name: "USD",
-              desc: "US Dollar",
+              desc: t("us-dollar"),
+            },
+            {
+              icon: <Icons type="SGD" className="!w-[36px] !h-[36px]" />,
+              name: "SGDTest1",
+              desc: t("sg-dollar"),
+            },
+            {
+              icon: <Icons type="INR" className="!w-[36px] !h-[36px]" />,
+              name: "INRTest1",
+              desc: t("ind-rupee"),
+            },
+            {
+              icon: <Icons type="USD" className="!w-[36px] !h-[36px]" />,
+              name: "USDTest1",
+              desc: t("us-dollar"),
+            },
+            {
+              icon: <Icons type="SGD" className="!w-[36px] !h-[36px]" />,
+              name: "SGDTest2",
+              desc: t("sg-dollar"),
+            },
+            {
+              icon: <Icons type="INR" className="!w-[36px] !h-[36px]" />,
+              name: "INRTest2",
+              desc: t("ind-rupee"),
+            },
+            {
+              icon: <Icons type="USD" className="!w-[36px] !h-[36px]" />,
+              name: "USDTest2",
+              desc: t("us-dollar"),
             },
           ],
         }}
       />
 
       <Overlay
-        title="Select a currency"
+        title={t("select-currency")}
         type={EType.CURRENCY}
         visible={showOverlay && overlayType === "selectToken"}
         setVisible={setShowOverlay}
@@ -209,6 +239,21 @@ const Login = () => {
               icon: <Icons type="USD" className="!w-[36px] !h-[36px]" />,
               name: "USDT",
               desc: "TON",
+            },
+            {
+              icon: <Icons type="SGD" className="!w-[36px] !h-[36px]" />,
+              name: "USDT",
+              desc: "Tron- Test1",
+            },
+            {
+              icon: <Icons type="INR" className="!w-[36px] !h-[36px]" />,
+              name: "USDT",
+              desc: "BNB Smart Chain- Test1",
+            },
+            {
+              icon: <Icons type="USD" className="!w-[36px] !h-[36px]" />,
+              name: "USDT",
+              desc: "TON- Test1",
             },
           ],
         }}

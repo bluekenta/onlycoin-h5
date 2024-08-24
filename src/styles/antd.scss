@@ -18,3 +18,42 @@
     }
   }
 }
+
+.ant-form-item {
+  .ant-form-item-label {
+    padding-bottom: 10px;
+    > label {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #bcbfba !important;
+    }
+  }
+  .ant-form-item-explain-warning {
+    color: #ff4d4f;
+  }
+  .ant-input {
+    height: 48px;
+    border-radius: 12px;
+    padding: 14px 12px;
+    background: #3a3a3a66 !important;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    color: white;
+    &.ant-input-outlined {
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+      &:hover {
+        border-color: #9fe870;
+      }
+      &.ant-input-status-error {
+        border-color: #ff4d4f;
+      }
+    }
+    &::placeholder {
+      color: #666666 !important;
+    }
+  }
+}

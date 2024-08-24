@@ -57,7 +57,7 @@ const Overlay = ({
             {currencyChildren?.searchBox && (
               <input
                 type="text"
-                className="w-full flex items-center p-[16px] rounded-[12px] bg-[#3A3A3A66] placeholder:text-[#666666] placeholder:text-[15px] placeholder:leading-[18px]"
+                className="w-full flex items-center p-[16px] rounded-[12px] bg-[#3A3A3A66] text-white placeholder:text-[#666666] placeholder:text-[15px] placeholder:leading-[18px]"
                 placeholder="Search Name"
               />
             )}
@@ -65,9 +65,9 @@ const Overlay = ({
             <p className="text-[18px] font-bold leading-[33px] text-white">
               {currencyChildren?.listTitle}
             </p>
-            <div className="flex flex-col items-start gap-[16px]">
+            <div className="flex flex-col items-start gap-[16px] h-[176px] overflow-y-auto">
               {currencyChildren?.currencies.map((item, idx) => (
-                <div key={idx} className="flex gap-[6px]">
+                <div key={idx} className="flex gap-[6px] w-full py-[6px]">
                   {item.icon}
                   <div className="flex flex-col">
                     <p className="text-white font-medium text-[15px] leading-[18px]">

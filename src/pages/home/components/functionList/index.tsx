@@ -27,7 +27,7 @@ const FunctionList = () => {
           className="relative h-[73px] w-full flex flex-col gap-[1px] items-center justify-center bg-semi_dark rounded-[12px] gradient-border-grey"
         >
           <div>{item.icon}</div>
-          <p className="leading-[17px]">{item.title}</p>
+          <p className="leading-[17px] text-white">{item.title}</p>
         </div>
       ))}
     </>
