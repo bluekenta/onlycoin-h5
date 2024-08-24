@@ -8,6 +8,6 @@ export enum LANGS {
   EN_US = "en_US",
 }
 
-export const INIT_LANG = LANGS.ZH_CN;
+export const INIT_LANG = LANGS.EN_US;
 
-export const INIT_THEME = THEME.LIGHT;
+export const INIT_THEME = THEME.DARK;

@@ -5,19 +5,25 @@ export default {
   darkMode: "selector",
   theme: {
     fontFamily: {
-      din: "Roboto",
+      SFProDisplay: ["SF Pro Display", "sans-serif"],
     },
     extend: {
       colors: {
-        light_color: "var(--light-color)",
-        dark_color: "var(--dark-color)",
-        dark_bg_color: "var(--dark-bg-color)",
+        semi_dark: "var(--semi-dark)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        inactive: "var(--inactive)",
+        border_inactive: "var(--border-inactive)",
+        overlay: "var(--overlay)"
       },
       fontSize: {
         base: "12px",
         xs: "9px",
         sm: "10px",
         lg: "14px",
+      },
+      boxShadow: {
+        sm: "0 1px 2px 0 var(--primary)",
       },
     },
   },

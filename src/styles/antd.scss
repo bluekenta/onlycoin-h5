@@ -1,111 +1,59 @@
-:root:root {
-    --app-bar-height: 44px;
-
-    --bottom-navigation-height                 : 46px;
-    --bottom-navigation-item__label            : 10px;
-    --bottom-navigation-item-icon-margin-bottom: 2px;
-    --dialog-border-radius                     : 10px;
-    --radio-icon-size                          : 18px;
-
-    --tabs-indicator-inner-size                       : 45px;
-    --tabs-background                                 : transparent;
-    --tab-active-font-size                            : 14px;
-    --tab-active-font-weight                          : 600;
-    --field-decorator-placeholder-size                : 10px;
-    --field-decorator-outlined-small-margin-top       : 6px;
-    --input-input-font-size                           : 12px;
-    --field-decorator-outlined-small-placeholder-space: 4px;
-    --field-decorator-outlined-normal-margin-top      : 10px;
-    --field-decorator-outlined-normal-margin-bottom   : 10px;
-    --checkbox-action-padding                         : 0px 2px 0px 0px;
-    --radio-action-padding                            : 0px 2px 0px 0px;
-    --checkbox-icon-size                              : 18px;
-    --card-border-radius                              : 4px;
-    --progress-linear-border-radius                   : 10px;
-    --snackbar-width                                  : 85%;
-    --snackbar-margin                                 : 0;
-    --snackbar-font-size                              : 13px --field-decorator-outlined-normal-margin-top: 10px;
-    --field-decorator-outlined-normal-margin-bottom   : 10px;
-    --checkbox-action-padding                         : 0px 2px 0px 0px;
-    --radio-action-padding                            : 0px 2px 0px 0px;
-    --checkbox-icon-size                              : 18px;
-    --card-border-radius                              : 4px;
-    --select-scroller-border-radius                   : 4px;
-    --uploader-file-margin                            : 0;
-    --dialog-message-padding                          : 20px;
-}
-
-.var-form {
-    .var-form-details {
-        margin-top: 0 !important;
-    }
-
-    .var-form-details__extra-message {
+.ant-modal {
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ant-modal-content {
+      width: 343px;
+      background: #171717;
+      padding: 0;
+      border-radius: 12px;
+      @apply gradient-border-grey;
+      .ant-modal-close {
         display: none;
+      }
+      .ant-modal-footer {
+        display: none;
+      }
     }
-
-    .var-form-details__error-message {
-        margin-top: 4px;
-        font-size : 10px;
-    }
+  }
 }
 
-.var-input {
-    // .var-field-decorator__icon,
-    // .var-field-decorator__middle {
-    //     margin: 6px 0 !important;
-    // }
-
-    .var-field-decorator__placeholder {
-        max-width: 100% !important;
+.ant-form-item {
+  .ant-form-item-label {
+    padding-bottom: 10px;
+    > label {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #bcbfba !important;
     }
-
-    // .var-field-decorator__placeholder {
-    //     font-size: 12px !important;
-    // }
-
-    // .var-field-decorator--hint-center {
-    //     left: 5px !important;
-    // }
-
-    // .var-field-decorator--placeholder-hint {
-    //     left     : 0px !important;
-    //     transform: translate(40px, -50%) scale(0.75) !important;
-    // }
-
-    // .var-field-decorator__line {
-    //     padding-left: 34px !important;
-    // }
-
-    // .var-field-decorator__line-legend--hint {
-    //     padding   : 0 4px !important;
-    //     box-sizing: content-box;
-    // }
-}
-
-.var-bottom-navigation {
-    .var-bottom-navigation-item__label {
-        font-size: 10px !important;
+  }
+  .ant-form-item-explain-warning {
+    color: #ff4d4f;
+  }
+  .ant-input {
+    height: 48px;
+    border-radius: 12px;
+    padding: 14px 12px;
+    background: #3a3a3a66 !important;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    color: white;
+    &.ant-input-outlined {
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+      &:hover {
+        border-color: #9fe870;
+      }
+      &.ant-input-status-error {
+        border-color: #ff4d4f;
+      }
     }
-}
-
-.security-dialog {
-    .var-dialog__actions {
-        justify-content: center;
-        padding        : 20px;
+    &::placeholder {
+      color: #666666 !important;
     }
-
-    .var-dialog__button[var-dialog-cover] {
-        width        : 120px;
-        border-radius: 20px;
-    }
-}
-
-.var-dialog__title,
-.var-dialog__message {
-    text-align: center !important;
-}
-
-.var-dialog__actions {
-    justify-content: space-around !important;
+  }
 }

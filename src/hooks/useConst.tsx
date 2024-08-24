@@ -1,55 +1,53 @@
 import { t } from "@/i18n";
-import homeIcon from "@/assets/layout/tabbar/home.png";
-import homeIconActive from "@/assets/layout/tabbar/home-active.png";
-import coinsIcon from "@/assets/layout/tabbar/coins.png";
-import coinsIconActive from "@/assets/layout/tabbar/coins-active.png";
-import optionsIcon from "@/assets/layout/tabbar/options.png";
-import optionsIconActive from "@/assets/layout/tabbar/options-active.png";
-import contractIcon from "@/assets/layout/tabbar/contract.png";
-import contractIconActive from "@/assets/layout/tabbar/contract-active.png";
-import assetsIcon from "@/assets/layout/tabbar/assets.png";
-import assetsIconActive from "@/assets/layout/tabbar/assets-active.png";
+import Icons from "@/components/icons";
 
 const useConst = () => {
+  const title = "OnlyCoin";
   const tabs = [
     {
-      title: t("首页"),
+      title: t("home"),
       name: "home",
       path: "/",
-      icon: homeIcon,
-      activeIcon: homeIconActive,
+      icon: <Icons type="menu_home" className="w-[24px] h-[24px]" />,
+      activeIcon: (
+        <Icons type="menu_home" className="w-[24px] h-[24px]" active={"true"} />
+      ),
     },
     {
-      title: t("货币"),
-      path: "/coins",
-      name: "coins",
-      icon: coinsIcon,
-      activeIcon: coinsIconActive,
+      title: t("account"),
+      path: "/account",
+      name: "account",
+      icon: <Icons type="account" className="w-[24px] h-[24px]" />,
+      activeIcon: (
+        <Icons type="account" className="w-[24px] h-[24px]" active={"true"} />
+      ),
     },
     {
-      title: t("选项"),
-      path: "/options",
-      name: "options",
-      icon: optionsIcon,
-      activeIcon: optionsIconActive,
+      title: t("earn"),
+      path: "/earn",
+      name: "earn",
+      icon: <Icons type="menu_earn" className="w-[24px] h-[24px]" />,
+      activeIcon: (
+        <Icons type="menu_earn" className="w-[24px] h-[24px]" active={"true"} />
+      ),
     },
     {
-      title: t("智能合约"),
-      path: "/contract",
-      name: "contract",
-      icon: contractIcon,
-      activeIcon: contractIconActive,
-    },
-    {
-      title: t("财产"),
-      path: "/assets",
-      name: "assets",
-      icon: assetsIcon,
-      activeIcon: assetsIconActive,
+      title: t("manage"),
+      path: "/manage",
+      name: "manage",
+      icon: <Icons type="menu_manage" className="w-[24px] h-[24px]" />,
+      activeIcon: (
+        <Icons
+          type="menu_manage"
+          className="w-[24px] h-[24px]"
+          active={"true"}
+        />
+      ),
     },
   ];
 
   return {
+    title,
     tabs,
   };
 };
